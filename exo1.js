@@ -1,4 +1,4 @@
-var tab1 = [2, 3, 4, 15, 16, 17, 0, 0, -4, 5, 6, 7, 8, 9, 10, 1, 2];
+var tab1 = [1, 2, 3, 4, 0, -2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 1, 2, 3];
 var tab2 = [];
 somme1 = 0;
 somme2 = 0;
@@ -9,18 +9,15 @@ for (i = 0; i < tab1.length; i++) {
   } else {
     if (somme1 > somme2) {
       deb = i - somme1;
-      end = i + 1;
+      end = i;
       somme2 = somme1;
       somme1 = 0;
     }
   }
 }
 k = 0;
-for (j = deb; j < end; j++) {
+for (j = end; j >= deb; j--) {
   tab2[k] = tab1[j];
   k++;
 }
 console.log(tab2);
-console.log(somme1);
-console.log(deb);
-console.log(end);
